@@ -9,33 +9,22 @@ function getRandomInteger(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-var wizards = [
-  {
-    name: getRandomInteger(WIZARD_NAMES) + ' ' + getRandomInteger(WIZARD_SURNAMES),
-    coatColor: getRandomInteger(COAT_COLORS),
-    eyesColor: getRandomInteger(EYES_COLORS)
-  },
-  {
-    name: getRandomInteger(WIZARD_NAMES) + ' ' + getRandomInteger(WIZARD_SURNAMES),
-    coatColor: getRandomInteger(COAT_COLORS),
-    eyesColor: getRandomInteger(EYES_COLORS)
-  },
-  {
-    name: getRandomInteger(WIZARD_NAMES) + ' ' + getRandomInteger(WIZARD_SURNAMES),
-    coatColor: getRandomInteger(COAT_COLORS),
-    eyesColor: getRandomInteger(EYES_COLORS)
-  },
-  {
-    name: getRandomInteger(WIZARD_NAMES) + ' ' + getRandomInteger(WIZARD_SURNAMES),
-    coatColor: getRandomInteger(COAT_COLORS),
-    eyesColor: getRandomInteger(EYES_COLORS)
+function makeWizard(count) {
+  var wizardsArray = [];
+  for (var i = 0; i < count; i++) {
+    wizardsArray[i] = {
+      name: getRandomInteger(WIZARD_NAMES) + ' ' + getRandomInteger(WIZARD_SURNAMES),
+      coatColor: getRandomInteger(COAT_COLORS),
+      eyesColor: getRandomInteger(EYES_COLORS)
+    };
   }
-];
+  return wizardsArray;
+}
+
+var wizards = makeWizard(4);
 
 var userDialog = document.querySelector('.setup');
 userDialog.classList.remove('hidden');
-
-document.querySelector('.setup-similar').classList.remove('hidden');
 
 var similarListElement = userDialog.querySelector('.setup-similar-list');
 var similarWizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
