@@ -68,7 +68,6 @@
   var similarListElement = setup.querySelector('.setup-similar-list');
   var similarWizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
 
-
   function renderWizard(wizard) {
     var wizardElement = similarWizardTemplate.cloneNode(true);
 
