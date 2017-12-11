@@ -33,7 +33,6 @@
   });
 
   var dialogHandle = setup.querySelector('.setup-user-pic');
-  dialogHandle.style.zIndex = '1';
 
   dialogHandle.addEventListener('mousedown', function (evt) {
     evt.preventDefault();
