@@ -61,7 +61,7 @@
     element.style.backgroundColor = color;
   }
 
-  wizardCoat.addEventListener('click', function () {
+  /*wizardCoat.addEventListener('click', function () {
     window.colorizeElement(wizardCoat, COAT_COLORS, fillElement);
   });
 
@@ -71,7 +71,11 @@
 
   fireball.addEventListener('click', function () {
     window.colorizeElement(fireball, FIREBALL_COLORS, changeElementBackground);
-  });
+  });*/
+
+  window.colorizeElement(wizardCoat, COAT_COLORS, fillElement);
+  window.colorizeElement(wizardEyes, EYES_COLORS, fillElement);
+  window.colorizeElement(fireball, FIREBALL_COLORS, changeElementBackground);
 
   var similarListElement = setup.querySelector('.setup-similar-list');
   var similarWizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');

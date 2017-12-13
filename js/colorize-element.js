@@ -2,11 +2,13 @@
 
 (function () {
   function colorizeElement(element, colors, callback) {
-    var color = window.util.getRandomInArray(colors);
+    element.addEventListener('click', function () {
+      var color = window.util.getRandomInArray(colors);
 
-    if (typeof callback === 'function') {
-      callback(element, color);
-    }
+      if (typeof callback === 'function') {
+        callback(element, color);
+      }
+    });
   }
 
   window.colorizeElement = colorizeElement;
