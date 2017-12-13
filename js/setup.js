@@ -53,16 +53,24 @@
   var wizardEyes = setup.querySelector('.setup-wizard .wizard-eyes');
   var fireball = setup.querySelector('.setup-fireball-wrap');
 
+  function fillElement(element, color) {
+    element.style.fill = color;
+  }
+
+  function changeElementBackground(element, color) {
+    element.style.backgroundColor = color;
+  }
+
   wizardCoat.addEventListener('click', function () {
-    wizardCoat.style.fill = window.util.getRandomInArray(COAT_COLORS);
+    window.colorizeElement(wizardCoat, COAT_COLORS, fillElement);
   });
 
   wizardEyes.addEventListener('click', function () {
-    wizardEyes.style.fill = window.util.getRandomInArray(EYES_COLORS);
+    window.colorizeElement(wizardEyes, EYES_COLORS, fillElement);
   });
 
   fireball.addEventListener('click', function () {
-    fireball.style.backgroundColor = window.util.getRandomInArray(FIREBALL_COLORS);
+    window.colorizeElement(fireball, FIREBALL_COLORS, changeElementBackground);
   });
 
   var similarListElement = setup.querySelector('.setup-similar-list');
