@@ -61,18 +61,6 @@
     element.style.backgroundColor = color;
   }
 
-  /*wizardCoat.addEventListener('click', function () {
-    window.colorizeElement(wizardCoat, COAT_COLORS, fillElement);
-  });
-
-  wizardEyes.addEventListener('click', function () {
-    window.colorizeElement(wizardEyes, EYES_COLORS, fillElement);
-  });
-
-  fireball.addEventListener('click', function () {
-    window.colorizeElement(fireball, FIREBALL_COLORS, changeElementBackground);
-  });*/
-
   window.colorizeElement(wizardCoat, COAT_COLORS, fillElement);
   window.colorizeElement(wizardEyes, EYES_COLORS, fillElement);
   window.colorizeElement(fireball, FIREBALL_COLORS, changeElementBackground);
