@@ -53,17 +53,17 @@
   var wizardEyes = setup.querySelector('.setup-wizard .wizard-eyes');
   var fireball = setup.querySelector('.setup-fireball-wrap');
 
-  wizardCoat.addEventListener('click', function () {
-    wizardCoat.style.fill = window.util.getRandomInArray(COAT_COLORS);
-  });
+  function fillElement(element, color) {
+    element.style.fill = color;
+  }
 
-  wizardEyes.addEventListener('click', function () {
-    wizardEyes.style.fill = window.util.getRandomInArray(EYES_COLORS);
-  });
+  function changeElementBackground(element, color) {
+    element.style.backgroundColor = color;
+  }
 
-  fireball.addEventListener('click', function () {
-    fireball.style.backgroundColor = window.util.getRandomInArray(FIREBALL_COLORS);
-  });
+  window.colorizeElement(wizardCoat, COAT_COLORS, fillElement);
+  window.colorizeElement(wizardEyes, EYES_COLORS, fillElement);
+  window.colorizeElement(fireball, FIREBALL_COLORS, changeElementBackground);
 
   var similarListElement = setup.querySelector('.setup-similar-list');
   var similarWizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
