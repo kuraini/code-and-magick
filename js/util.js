@@ -29,6 +29,12 @@ window.util = (function () {
     },
     getRandomNumber: function () {
       return Math.ceil(Math.random() * 10) / 10;
+    },
+    fillElement: function (element, color) {
+      element.style.fill = color;
+    },
+    changeElementBackground: function (element, color) {
+      element.style.backgroundColor = color;
     }
   };
 })();
