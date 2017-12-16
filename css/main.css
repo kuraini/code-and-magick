@@ -874,3 +874,43 @@ input[type=radio]:checked + .review-mark-label {
   left: 0;
   top: 0;
 }
+
+.server-error {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+  background-color: #da641a;
+}
+
+.server-error__icon {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-right: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.server-error__icon::before,
+.server-error__icon::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 15px;
+  width: 2px;
+  height: 17px;
+  background-color: #da641a;
+}
+
+.server-error__icon::before {
+  transform: rotate(45deg);
+}
+
+.server-error__icon::after {
+  transform: rotate(-45deg);
+}
