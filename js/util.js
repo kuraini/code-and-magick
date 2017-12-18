@@ -35,6 +35,15 @@ window.util = (function () {
     },
     changeElementBackground: function (element, color) {
       element.style.backgroundColor = color;
+    },
+    createErrorMessage: function (message) {
+      var node = document.createElement('div');
+      var nodeIcon = document.createElement('span');
+      node.classList.add('server-error');
+      nodeIcon.classList.add('server-error__icon');
+      node.textContent = message;
+      document.body.insertAdjacentElement('afterbegin', node);
+      node.appendChild(nodeIcon);
     }
   };
 })();
